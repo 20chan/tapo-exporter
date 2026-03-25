@@ -1,0 +1,18 @@
+[package]
+name = "tapo-exporter"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-jobs = "0.1.7"
+actix-rt = "2.11.0"
+actix-web = "4.13.0"
+actix-web-prom = "0.10.0"
+async-trait = "0.1"
+dotenv = "0.15"
+prometheus = "0.14.0"
+prometheus_exporter = "0.8.5"
+serde = "1.0.228"
+tapo = "0.8"
+tokio = { version = "1", features = ["full"] }
+toml = "1.0.6"
