@@ -52,35 +52,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .run()
         .await?;
 
-    /*
-    for plug in config.plugs.unwrap_or_default() {
-        let device = ApiClient::new(&username, &password)
-            .p115(plug.host)
-            .await?;
-
-        let current_power = device.get_current_power().await?.current_power;
-        let usage = device.get_energy_usage().await?;
-        println!("plug {}: power={}, usage: current_power={}, today_energy={}, today_runtime={}", plug.name, current_power, usage.current_power.unwrap_or(0), usage.today_energy, usage.today_runtime);
-    }
-
-    for hub in config.hubs.unwrap_or_default() {
-        let device = ApiClient::new(&username, &password)
-            .h100(hub.host)
-            .await?;
-
-        let child_devices = device.get_child_device_list().await?;
-        for child in child_devices {
-            match child {
-                ChildDeviceHubResult::T31X(device) => {
-                    println!("hub {}: child device: {} ({}), status: {:?}, temperature: {} °C, humidity: {} %, nickname: {}, low battery: {}", hub.name, device.nickname, device.device_id, device.status, device.current_temperature, device.current_humidity, device.nickname, device.at_low_battery)
-                }
-                _ => {}
-            }
-        }
-    }
-    */
-
-
     Ok(())
 }
 
